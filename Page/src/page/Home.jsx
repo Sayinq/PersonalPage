@@ -1,31 +1,29 @@
-import React from 'react'
-import NavbarComp from '../components/NavbarComp'
+import React from 'react';
+import NavbarComp from '../components/NavbarComp';
 
 const Home = () => {
   return (
     <main>
         <NavbarComp />
-        <section className="w-screen h-screen bg-[url('./src/assets/PlaceholderBG.jpg')] bg-cover bg-center top-0 -mt-32">
-            
+        <section
+          id="landing-hero"
+          className="w-screen h-screen bg-[url('./src/assets/PlaceholderBG.jpg')] bg-cover bg-center top-0 -mt-44"
+        >
         </section>
-        <section className="flex flex-col w-screen h-screen bg-coolblack px-4 py-48 gap-y-8">
-            <p className="font-medium text-[0.875rem] text-[#FFFFFF] uppercase tracking-[0.5em]">About me</p>
-            <span className="w-[375px] font-bold text-4xl text-[#B7AB98] tracking-wider leading-[105%]">
-            I'm a 
-            results-driven professional
-            with a passion for crafting exceptional web experiences 
-            and bringing stories to life through video editing.
+        <section className="flex flex-col w-screen h-screen bg-coolblack md:justify-center md:items-center px-[1.25rem] md:py-64 py-48 gap-y-8">
+            <div id="about-content-wrapper" className="text-offwhite font-bold 2xl:leading-[120%] sm:leading-[110%] leading-[101%] relative 2xl:max-w-[1000px] lg:max-w-[800px] md:max-w-[600px] sm:max-w-[500px] max-w-[20rem] text-[2.75rem]">
+            <p className="w-full font-bold text-[0.875rem] text-rusticoffwhite uppercase tracking-[0.5em] mb-[1.875rem]">About me</p>
+            <span className="text-[2.5rem] sm:text-[3rem] 2xl:text-[4rem]">Results-driven professional passionate about crafting exceptional 
+            web experiences and bringing stories to life through video editing.
             </span>
+            </div>
         </section>
-        <div className="bg-coolblack p-4">
-        <p className="font-medium text-[0.875rem] text-[#FFFFFF] uppercase tracking-[0.5em]">Some things I've built.</p>
-        </div>
-        <section id="work" className="w-screen h-auto bg-offwhite-bg">
-            <div id="work-wrapper" className="flex flex-wrap justify-center items-center px-4 py-24 gap-y-2">
-                <div id="left-sticky" className="sticky h-full w-fit">
-                    <h2 className="text-coolblack">Sticky Text</h2>
+        <section id="work" className="w-screen h-auto bg-offwhite-bg p-8">
+            <div id="work-wrapper" className="flex flex-wrap justify-center px-4 py-24 gap-y-2">
+                <div id="left-sticky" className="lg:h-[1536px] h-fit lg:w-1/2 w-fit">
+                <h2 className="flex sticky top-80 left-0 font-medium xl:text-[1.25rem] lg:text-[1.05rem] text-[0.95rem] text-rusticoffwhite tracking-[0.5em] p-[1.25rem]">Some things I've built.</h2>
                 </div>
-                <div id="right-fixed" className="flex flex-col gap-y-8">
+                <div id="right-fixed" className="flex flex-col gap-y-8 lg:w-1/2 w-fit">
                     <div id="work-details" className="w-[400px] h-[500px] bg-coolblack rounded-[35px]">
                         <div id="work-text" className="flex flex-col w-full h-[500px] justify-between p-6">
                             <span className="text-3xl font-bold tracking-wide">01</span>
