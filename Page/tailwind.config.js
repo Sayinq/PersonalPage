@@ -7,9 +7,6 @@ export default {
   theme: {
     colors: {},
     extend: {
-      backgroundImage: {
-        'hero-video': "url('./src/assets/Predicted.mp4')",
-      },
       colors: {
         'coolblack': '#0D0D0D',
         'offwhite-bg': '#EFEFED',

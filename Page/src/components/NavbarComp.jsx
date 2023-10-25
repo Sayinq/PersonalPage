@@ -2,7 +2,7 @@ import React from 'react'
 
 const NavbarComp = () => {
   return (
-    <nav id="navbar-wrapper" className="flex flex-row justify-between items-center top-0 left-0 sticky w-screen h-auto p-6 lg:px-24 pt-12 px-8 z-50 bg-gradient-to-b from-coolblack to-coolblack/0">
+    <nav id="navbar-wrapper" className="flex flex-row justify-between items-center top-0 left-0 sticky w-screen h-auto p-6 lg:px-24 pt-12 px-8 z-50">
         <div id="navbar-logo" className="">
             <img src="./src/assets/logotesttransparent.png" className="w-24 h-24" />
         </div>

@@ -1,18 +1,15 @@
 import React from 'react';
 import NavbarComp from '../components/NavbarComp';
+import HeroSection from '../components/HeroSection';
 
 const Home = () => {
   return (
     <main>
         <NavbarComp />
-        <section
-          id="landing-hero"
-          className="w-screen h-screen bg-[url('./src/assets/PlaceholderBG.jpg')] bg-cover bg-center top-0 -mt-44"
-        >
-        </section>
+        <HeroSection />
         <section className="flex flex-col w-screen h-screen bg-coolblack md:justify-center md:items-center px-[1.25rem] md:py-64 py-48 gap-y-8">
             <div id="about-content-wrapper" className="text-offwhite font-bold 2xl:leading-[120%] sm:leading-[110%] leading-[101%] relative 2xl:max-w-[1000px] lg:max-w-[800px] md:max-w-[600px] sm:max-w-[500px] max-w-[20rem] text-[2.75rem]">
-            <p className="w-full font-bold text-[0.875rem] text-rusticoffwhite uppercase tracking-[0.5em] mb-[1.875rem]">About me</p>
+            <h2 className="w-full font-bold text-[0.875rem] text-rusticoffwhite uppercase tracking-[0.5em] mb-[1.875rem]">About me</h2>
             <span className="text-[2.5rem] sm:text-[3rem] 2xl:text-[4rem]">Results-driven professional passionate about crafting exceptional 
             web experiences and bringing stories to life through video editing.
             </span>
