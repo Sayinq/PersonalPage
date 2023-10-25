@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: SummerDream;
   line-height: 1.5;
   font-weight: 400;
 
@@ -18,3 +18,20 @@
   -webkit-text-size-adjust: 100%;
 }
 
+body {
+  overflow-x: hidden;
+}
+
+@font-face {
+  font-family: "Alliance";
+  src:
+    local("Alliance"),
+    url("../src/assets/fonts/Alliance.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "SummerDream";
+  src:
+   local("SummerDream"),
+   url("../src/assets/fonts/SummerDream.ttf") format("truetype");
+}
