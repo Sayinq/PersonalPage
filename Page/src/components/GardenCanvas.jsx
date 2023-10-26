@@ -11,8 +11,6 @@ gsap.registerPlugin(ScrollTrigger);
 function RoboModel() {
     const gltf = useLoader(GLTFLoader, roboObject)
     const { scene } = useThree();
-    const axesHelper = new THREE.AxesHelper( 5 );
-    scene.add( axesHelper );
 
     useEffect(() => {
         gltf.scene.scale.set(1.15, 1.15, 1.15);
@@ -28,14 +26,14 @@ function RoboModel() {
                 start: 'top center',
                 end: 'bottom center',
                 scrub: true,
-                markers: true,
             },
         });
 
         gsap.from(gltf.scene.position, {
             x: -30,
             opacity: 0,
-            duration: 1,
+            duration: 2,
+            ease: 'sine.out',
             scrollTrigger: {
                 trigger: '#robo-canvas',
                 start: 'top center',

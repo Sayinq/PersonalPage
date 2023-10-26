@@ -56,6 +56,9 @@ function MouseCanvas() {
     <div id="mouse-canvas" className="absolute 2xl:left-[1000px] 2xl:-top-10 w-[1000px] h-[1000px]">
       <Canvas>
         <ambientLight intensity={4} />
+        <directionalLight castShadow intensity={2} position={[-20, 6, 6]} shadow-mapSize={[1024, 1024]}>
+            <orthographicCamera attach="shadow-camera" left={-20} right={20} top={20} bottom={-20} />
+        </directionalLight>
         <Suspense fallback={null}>
         <PerspectiveCamera makeDefault position={[0, 0, 10]} up={[0, 0, 1]} fov={75} near={0.1} far={1000} />
         <MouseModel />
