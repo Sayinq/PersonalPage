@@ -2,7 +2,8 @@ import React from 'react';
 import NavbarComp from '../components/NavbarComp';
 import HeroSection from '../components/HeroSection';
 import WorkSection from '../components/WorkSection';
-import ThreeCanvas from '../components/ThreeCanvas';
+import KeyboardCanvas from '../components/KeyboardCanvas';
+import MouseCanvas from '../components/MouseCanvas';
 import omegaPic from '../assets/images/Omega.jpg';
 import albaPic from '../assets/images/alba.jpg';
 import vanitystorePic from '../assets/images/vanitystore.jpg';
@@ -31,8 +32,11 @@ const Home = () => {
         <NavbarComp />
         <HeroSection />
         <section id="about" className="flex flex-col w-screen h-screen bg-coolblack md:justify-center md:items-center px-[1.25rem] md:py-64 py-48 gap-y-8">
-            <div id="canvas-container" className="flex absolute justify-center items-center">
-                <ThreeCanvas />
+            <div id="keyboard-container" className="flex absolute justify-center items-center">
+                <KeyboardCanvas />
+            </div>
+            <div id="mouse-container" className="flex absolute justify-center items-center">
+                <MouseCanvas />
             </div>
             <div id="about-content-wrapper" className="text-offwhite font-bold 2xl:leading-[140%] sm:leading-[110%] leading-[101%] relative 2xl:max-w-[1000px] lg:max-w-[800px] md:max-w-[600px] sm:max-w-[500px] max-w-[20rem] text-[2.75rem] select-none">
             <h2 className="w-full font-bold text-[0.875rem] text-rusticoffwhite uppercase tracking-[0.5em] mb-[1.875rem]">About me</h2>
