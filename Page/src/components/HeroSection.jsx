@@ -35,7 +35,7 @@ const HeroSection = () => {
     return (
       <section
         id="landing-hero"
-        className="flex flex-col justify-center items-center p-4 w-screen h-screen bg-[#000000] top-0 mt-[-11.25rem] overflow-x-hidden"
+        className="flex flex-col justify-center items-center p-4 w-screen h-screen bg-[#000000] top-0 mt-[-11.25rem] overflow-x-hidden select-none"
       >
         <div id="video-bg" className="absolute inset-0">
             <video
@@ -49,7 +49,7 @@ const HeroSection = () => {
             </video>
         </div>
         <h2 className="font-semibold tracking-[0.25rem] uppercase -translate-y-28 text-[0.75rem]">Myles Was Bored</h2>
-        <div className="w-full h-fit text-[#4D4D4D] md:text-[4rem] sm:text-[3rem] text-[2rem] text-center m-0 leading-[0px] font-black" ref={textRef}>
+        <div className="w-full h-fit text-[#4D4D4D] md:text-[4rem] sm:text-[3rem] text-[2rem] text-center m-0 leading-[0px] font-black select-none" ref={textRef}>
           <p>UI Designer</p>
           <p>Web Developer</p>
           <p>Video Editor</p>

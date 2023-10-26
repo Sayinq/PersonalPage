@@ -85,7 +85,7 @@ const NavbarComp = () => {
       </div>
       <ul
         id="navbar-links"
-        className="flex flex-col gap-y-2 text-rusticoffwhite font-bold text-[1.25rem]"
+        className="flex flex-col gap-y-2 text-[#D2D2D2] font-bold text-[1.25rem]"
       >
         <a
           onClick={() => scrollToSection('landing-hero')}
@@ -100,7 +100,7 @@ const NavbarComp = () => {
           WORK
         </a>
         <a
-          onClick={() => scrollToSection('footer-section')}
+          onClick={() => scrollToSection('footer-hero')}
           className="hover:text-offwhite text-right transition-all duration-200 ease-in-out cursor-pointer"
         >
           CONTACT
