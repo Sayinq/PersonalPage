@@ -55,7 +55,7 @@ function WorkSection({ workItems }) {
             <GardenCanvas />
           </div>
           <div id="work-wrapper" className="flex lg:flex-row flex-col justify-center px-4 py-24 gap-y-2">
-            <div id="left-sticky" className="2xl:h-[800px] lg:h-[2495px] h-fit lg:w-1/2 w-fit">
+            <div id="left-sticky" className="2xl:h-[800px] lg:h-[835px] h-fit lg:w-1/2 w-fit">
               <h2 id="sticky-text" className="flex justify-center sticky top-80 left-0 font-medium 2xl:text-[2rem] text-[1.5rem] text-rusticoffwhite tracking-[0.5em] p-[1.25rem] select-none">My Garden</h2>
             </div>
             <div id="right-fixed" className="flex flex-col gap-y-8 lg:w-1/2 w-full">

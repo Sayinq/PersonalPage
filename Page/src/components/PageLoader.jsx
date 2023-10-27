@@ -35,7 +35,7 @@ function PageLoader() {
 
   return (
     <div id="overlay-wrapper" className={animationComplete ? 'hidden' : 'overflow-hidden'}>
-      <h1 className="counter flex fixed w-full h-full justify-end items-end text-[#BCBCC4] pt-[0.2em] pl-[0.4em] text-[20vw]">
+      <h1 className="counter flex fixed w-full h-full justify-end items-end text-[#BCBCC4] pt-[0.2em] lg:pl-[0.4em] pr-[1rem] pl-[0.4em] text-[20vw]">
         0
       </h1>
       <div className="overlay flex fixed w-screen h-screen">

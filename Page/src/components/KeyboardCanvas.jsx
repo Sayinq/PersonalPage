@@ -48,7 +48,7 @@ function Model() {
 
 function KeyboardCanvas() {
   return (
-    <div id="canvas" className="absolute lg:flex hidden 2xl:right-[1000px] 2xl:-bottom-10 w-[1000px] h-[1000px]">
+    <div id="canvas" className="absolute lg:flex hidden 3xl:right-[700px] 2xl:right-[500px] xl:right-[450px] 3xl:-bottom-60 2xl:-bottom-[350px] xl:-bottom-[640px] w-[1000px] h-[1000px]">
       <Canvas>
         <ambientLight intensity={0.1} />
         <PerspectiveCamera makeDefault position={[0, 0, 10]} up={[0, 0, 1]} fov={75} near={0.1} far={1000} />

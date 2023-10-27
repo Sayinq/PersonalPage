@@ -7,7 +7,7 @@ import MouseCanvas from '../components/MouseCanvas';
 import omegaPic from '../assets/images/Omega.jpg';
 import albaPic from '../assets/images/alba.jpg';
 import vanitystorePic from '../assets/images/vanitystore.jpg';
-import footerHero from '../assets/Predicted.mp4';
+import FooterHero from '../components/FooterHero';
 
 const Home = () => {
     const workItems = [
@@ -48,37 +48,7 @@ const Home = () => {
         <WorkSection workItems={workItems} />
 
         {/* Instead of chasing butterflies, create a captivating garden, and they'll flutter in on their own */}
-        <section id="footer-hero" className="flex items-center justify-center w-screen h-screen bg-coolblack">
-            <div id="footer-video" className="relative">
-                <div id="gradient-overlay" className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-[#111111]/60 to-[#111111]/60" />
-                <video
-                autoPlay
-                muted
-                loop
-                preload="auto"
-                className="object-cover w-screen h-screen"
-                >
-                <source src={footerHero} type="video/mp4" />
-                </video>
-                <div className="absolute inset-0 flex flex-col text-center items-center justify-center font-bold 2xl:text-[4rem] xl:text-[3.25rem] md:text-[2.75rem] sm:text-[2.25rem] text-[1.75rem] text-white">
-                    <div id="text-line">
-                        <span className="">
-                            Instead of chasing butterflies,
-                        </span>
-                    </div>
-                    <div id="text-line">
-                        <span className="">
-                            create a captivating garden,
-                        </span>
-                    </div>
-                    <div id="text-line">
-                        <span className="">
-                            and they'll flutter in on their own.
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <FooterHero />
 
         <footer id="footer-section" className="flex sm:flex-row flex-col sm:justify-evenly sm:items-center w-screen h-fit bg-coolblack py-12 px-6 gap-y-8">
             <div id="footer-header__wrapper" className="flex flex-col gap-y-8 max-w-[1920px]">

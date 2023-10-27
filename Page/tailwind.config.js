@@ -7,6 +7,9 @@ export default {
   theme: {
     colors: {},
     extend: {
+      screens: {
+        '3xl': '1920px',
+      },
       colors: {
         'coolblack': '#0D0D0D',
         'offwhite-bg': '#EFEFED',

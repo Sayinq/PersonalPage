@@ -37,7 +37,7 @@ const HeroSection = () => {
         id="landing-hero"
         className="flex flex-col justify-center items-center p-4 w-screen h-screen bg-[#000000] top-0 mt-[-11.25rem] overflow-x-hidden select-none"
       >
-        <div id="video-bg" className="absolute inset-0">
+        <div id="video-bg" className="absolute inset-0 top-0 left-0 bottom-0 right-0">
             <video
             autoPlay
             muted

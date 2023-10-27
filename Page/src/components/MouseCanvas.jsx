@@ -54,7 +54,7 @@ function MouseModel() {
 
 function MouseCanvas() {
   return (
-    <div id="mouse-canvas" className="absolute lg:flex hidden 2xl:left-[1000px] 2xl:-top-10 w-[1000px] h-[1000px]">
+    <div id="mouse-canvas" className="absolute lg:flex hidden 3xl:left-[600px] 2xl:left-[300px] xl:left-[200px] 2xl:-top-40 w-[1000px] h-[1000px]">
       <Canvas>
         <ambientLight intensity={4} />
         <directionalLight castShadow intensity={2} position={[-20, 6, 6]} shadow-mapSize={[1024, 1024]}>
