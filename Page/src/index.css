@@ -43,7 +43,3 @@ body {
 .overlay {
   z-index: 999;
 }
-
-.scroll-control {
-  overflow: hidden;
-}

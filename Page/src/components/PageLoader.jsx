@@ -6,7 +6,7 @@ function PageLoader() {
 
   useEffect(() => {
     const counterAnimation = gsap.to('.counter', {
-      duration: 3,
+      duration: 6.5,
       innerText: 100,
       snap: 'innerText',
       ease: 'none',
