@@ -34,7 +34,8 @@ function MouseModel() {
     gsap.from(gltf.scene.position, {
       x: 30,
       opacity: 0,
-      duration: 1,
+      duration: 0.5,
+      ease: 'sine.out',
       scrollTrigger: {
         trigger: '#mouse-canvas',
         start: 'top center',
@@ -53,7 +54,7 @@ function MouseModel() {
 
 function MouseCanvas() {
   return (
-    <div id="mouse-canvas" className="absolute 2xl:left-[1000px] 2xl:-top-10 w-[1000px] h-[1000px]">
+    <div id="mouse-canvas" className="absolute lg:flex hidden 2xl:left-[1000px] 2xl:-top-10 w-[1000px] h-[1000px]">
       <Canvas>
         <ambientLight intensity={4} />
         <directionalLight castShadow intensity={2} position={[-20, 6, 6]} shadow-mapSize={[1024, 1024]}>

@@ -35,3 +35,15 @@ body {
    local("SummerDream"),
    url("../src/assets/fonts/SummerDream.ttf") format("truetype");
 }
+
+.counter {
+  z-index: 1000;
+}
+
+.overlay {
+  z-index: 999;
+}
+
+.scroll-control {
+  overflow: hidden;
+}

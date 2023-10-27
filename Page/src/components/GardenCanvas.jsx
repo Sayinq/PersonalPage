@@ -49,7 +49,7 @@ function RoboModel() {
 
 function GardenCanvas() {
   return (
-    <div id="robo-canvas" className="absolute 2xl:-left-[1000px] 2xl:-top-10 w-[2000px] h-[2000px]">
+    <div id="robo-canvas" className="absolute lg:flex hidden 2xl:-left-[1000px] 2xl:-top-10 w-[2000px] h-[2000px]">
       <Canvas>
         <ambientLight intensity={3} />
         <directionalLight castShadow intensity={2} position={[10, 6, 6]} shadow-mapSize={[1024, 1024]}>
