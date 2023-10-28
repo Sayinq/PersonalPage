@@ -42,7 +42,9 @@ function FooterHero() {
           </Float>
       </Canvas>
 
-      <div id="text-wrapper" className="absolute inset-0 flex flex-col text-center items-center justify-center font-bold 2xl:text-[4rem] xl:text-[3.25rem] md:text-[2.75rem] sm:text-[2.25rem] text-[1.5rem] text-white z-40">
+
+      {/* Maybe a background gradient over text from top to bottom */}
+      <div id="text-wrapper" className="absolute text-offwhite inset-0 flex flex-col text-center items-center justify-center font-bold 2xl:text-[4rem] xl:text-[3.25rem] md:text-[2.75rem] sm:text-[2.25rem] text-[1.5rem] text-white z-40">
         <div id="text-line">
           <span className="">
             Instead of chasing butterflies,

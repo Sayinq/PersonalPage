@@ -32,8 +32,8 @@ function RoboModel() {
         gsap.from(gltf.scene.position, {
             x: -30,
             opacity: 0,
-            duration: 2,
-            ease: 'sine.out',
+            duration: 0.75,
+            ease: 'spring',
             scrollTrigger: {
                 trigger: '#robo-canvas',
                 start: 'top center',
@@ -49,7 +49,7 @@ function RoboModel() {
 
 function GardenCanvas() {
   return (
-    <div id="robo-canvas" className="absolute lg:flex hidden 3xl:-left-[1000px] 2xl:-left-[1200px] lg:-left-[900px] xl:scale-100 lg:scale-75 3xl:-top-10 2xl:-top-40 lg:-top-60  w-[2000px] h-[2000px]">
+    <div id="robo-canvas" className="absolute lg:flex hidden 3xl:-left-[1000px] 2xl:-left-[1200px] xl:-left-[850px] lg:-left-[900px] 2xl:scale-100 lg:scale-75 3xl:-top-10 2xl:-top-40 lg:-top-60  w-[2000px] h-[2000px] pointer-events-none">
       <Canvas>
         <ambientLight intensity={3} />
         <directionalLight castShadow intensity={2} position={[10, 6, 6]} shadow-mapSize={[1024, 1024]}>
