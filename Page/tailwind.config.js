@@ -9,6 +9,7 @@ export default {
     extend: {
       screens: {
         '3xl': '1920px',
+        '4xl': '2440px',
       },
       colors: {
         'coolblack': '#0D0D0D',
