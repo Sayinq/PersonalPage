@@ -4,6 +4,7 @@ import { Bloom, DepthOfField, EffectComposer, Vignette } from '@react-three/post
 import { Canvas, useLoader } from '@react-three/fiber';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import { ButterflyModel } from '../assets/objects/ButterflyModel';
+import '../index.css';
 
 function ButterflyCanvas() {
   const gltf = useLoader(GLTFLoader, ButterflyModel); 
@@ -15,7 +16,7 @@ function ButterflyCanvas() {
 
 function FooterHero() {
   return (
-    <div id="footer-hero" className="relative flex items-center justify-center w-screen h-screen bg-coolblack">
+    <div id="footer-hero" className="relative flex items-center justify-center w-screen h-screen">
         
       <Canvas className="absolute top-0 left-0 bottom-0 right-0 z-30">
         <color attach='background' args={['#000000']} />
@@ -31,32 +32,48 @@ function FooterHero() {
         </EffectComposer>
         <directionalLight castShadow intensity={0.5} position={[-20, 6, 6]} shadow-mapSize={[1024, 1024]} />
           <Float
+            speed={0.3}
+            rotationIntensity={0.6}
+            floatIntensity={0.3}
+            floatingRange={[0.15, 1.2]}
+          >
+            <ButterflyModel scale={0.05} position={[-10, -3, -6]} />
+          </Float>
+
+          <Float
             speed={0.75}
             rotationIntensity={0.5}
             floatIntensity={0.2}
             floatingRange={[0.25, 0.5]}
           >
-            <ButterflyModel scale={0.05} position={[-10, -3, -6]} />
             <ButterflyModel scale={0.05} position={[0, -2.5, 0]} />
+          </Float>
+
+          <Float
+            speed={0.5}
+            rotationIntensity={0.75}
+            floatIntensity={0.5}
+            floatingRange={[0.25, 0.7]}
+          >
             <ButterflyModel scale={0.05} position={[10, -4.5, -10]} />
           </Float>
       </Canvas>
 
 
       {/* Maybe a background gradient over text from top to bottom */}
-      <div id="text-wrapper" className="absolute text-offwhite inset-0 flex flex-col text-center items-center justify-center font-bold 2xl:text-[4rem] xl:text-[3.25rem] md:text-[2.75rem] sm:text-[2.25rem] text-[1.5rem] text-white z-40">
+      <div id="text-wrapper" className="absolute text-white inset-0 flex flex-col text-center items-center justify-center font-bold 2xl:text-[3.5rem] xl:text-[3rem] lg:text-[2.5rem] sm:text-[2rem] text-[1.5rem] z-40">
         <div id="text-line">
-          <span className="">
+          <span className="opacity-[0.8]">
             Instead of chasing butterflies,
           </span>
         </div>
         <div id="text-line">
-          <span className="">
+          <span className="opacity-[0.6]">
             create a captivating garden,
           </span>
         </div>
         <div id="text-line">
-          <span className="">
+          <span className="opacity-[0.4]">
             and they'll flutter in on their own.
           </span>
         </div>
