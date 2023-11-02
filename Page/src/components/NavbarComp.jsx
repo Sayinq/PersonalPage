@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
+import personalLogo from '../assets/images/logotesttransparent.png';
 
 const NavbarComp = () => {
   const [isCursorInside, setIsCursorInside] = useState(false);
@@ -79,7 +80,7 @@ const NavbarComp = () => {
         ref={logoRef}
       >
         <img
-          src="./src/assets/images/logotesttransparent.png"
+          src={personalLogo}
           className={`w-24 h-24 ${isCursorInside ? 'cursor-follow' : 'cursor-original'}`}
         />
       </div>
