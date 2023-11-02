@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import {Button } from "@nextui-org/react";
+import { Button, Link } from "@nextui-org/react";
 import GardenCanvas from './GardenCanvas';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -45,10 +45,10 @@ function WorkSection({ workItems }) {
         gsap.set(stickyText, { opacity: 0, y: 50 });
       };
       
-      const buttonGroup = document.getElementById('button-group');
+      const workButton = document.getElementById('work-button');
       const buttonAnimation = gsap.fromTo(
-        buttonGroup,
-        { opacity: 0, y: 50 },
+        workButton,
+        { opacity: 0 },
         {
           opacity: 1,
           y: 0,
@@ -56,13 +56,13 @@ function WorkSection({ workItems }) {
           stagger: 0.02,
           scrub: 0.5,
           scrollTrigger: {
-            trigger: buttonGroup,
+            trigger: workButton,
             start: 'top center+=50',
             end: 'bottom center+=100',
           },
         }
       );
-      gsap.set(buttonGroup, {opacity: 0, y: 50 });
+      gsap.set(workButton, {opacity: 0 });
       
 
   
@@ -71,21 +71,20 @@ function WorkSection({ workItems }) {
 
     return (
         <section id="work" className="w-screen h-auto bg-offwhite-bg p-8">
-          <div id="work-wrapper" className="flex lg:flex-row flex-col justify-center px-4 py-24 gap-y-2">
-            <div id="left-sticky" className="flex flex-col lg:h-[2350px] h-fit lg:w-1/2 w-fit will-change-auto gap-x-4">
+          <div id="work-wrapper" className="flex lg:flex-row flex-col justify-center items-center px-4 py-24 gap-y-2">
+            <div id="left-sticky" className="flex flex-col lg:h-[2475px] h-fit lg:w-1/2 w-fit will-change-auto gap-x-4">
+              <div className="flex flex-col justify-center items-center sticky top-80 left-0">
               <h2 
                 id="sticky-text" 
-                className="flex justify-center sticky top-80 left-0 font-semibold 3xl:text-[3.5rem] 2xl:text-[3rem] lg:text-[2.5rem] md:text-[3rem] text-[1.5rem] text-rusticoffwhite tracking-[0.25em] p-[1.25rem] select-none pb-[5.5rem]"
+                className="flex justify-center font-semibold 3xl:text-[3.5rem] 2xl:text-[3rem] lg:text-[2.5rem] md:text-[3rem] text-[1.85rem] text-rusticoffwhite tracking-[0.25em] p-[1.25rem] select-none pb-[5.5rem]"
               >
                   My Garden
               </h2>
-              <div id="button-group" className="lg:flex hidden flex-row sticky top-[28rem] left-0 gap-x-2 items-center justify-center">
-                <Button id="git-button" radius="lg" className="text-white shadow-lg py-8 px-12 bg-coolblack">
-                  Github
+              <Link href="https://github.com/Sayinq">
+                <Button id="work-button" radius="lg" className="lg:flex hidden bg-rusticoffwhite px-12 py-6 lg:-mt-20 text-xl text-white">
+                  <span className="pt-2 text-offwhite">View more</span>
                 </Button>
-                <Button id="resume-button" radius="lg" className="text-white shadow-lg py-8 px-12 bg-coolblack">
-                  Resume
-                </Button>
+              </Link>
               </div>
             </div>
             <div id="right-fixed" className="flex flex-col gap-y-8 lg:w-1/2 w-full">
@@ -106,6 +105,11 @@ function WorkSection({ workItems }) {
                 </a>
               ))}
             </div>
+            <Link href="https://github.com/Sayinq">
+                <Button id="work-button" radius="lg" className="lg:hidden flex bg-rusticoffwhite px-12 py-6 mt-16 text-xl text-white">
+                  <span className="pt-2 text-offwhite">View more</span>
+                </Button>
+            </Link>
           </div>
         </section>
       );
