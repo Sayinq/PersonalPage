@@ -1,13 +1,14 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Environment, Float } from '@react-three/drei';
 import { Bloom, DepthOfField, EffectComposer, Vignette } from '@react-three/postprocessing';
 import { Canvas, useLoader } from '@react-three/fiber';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import { ButterflyModel } from '../assets/objects/ButterflyModel';
 import '../index.css';
+import gsap from 'gsap';
 
 function ButterflyCanvas() {
-  const gltf = useLoader(GLTFLoader, ButterflyModel); 
+  const gltf = useLoader(GLTFLoader, ButterflyModel);
 
   return (
     <primitive object={gltf.scene} scale={0.2} position={[0, 0, 0]} />
@@ -15,9 +16,39 @@ function ButterflyCanvas() {
 }
 
 function FooterHero() {
+  const textLinesRef = useRef(null);
+
+  useEffect(() => {
+    const textLines = textLinesRef.current.querySelectorAll('.text-line');
+    const observer = new IntersectionObserver(handleIntersection, {
+      threshold: 0.5,
+    });
+
+    textLines.forEach((line) => {
+      observer.observe(line);
+    });
+
+    function handleIntersection(entries, observer) {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const textLine = entry.target;
+          const tl = gsap.timeline();
+          tl.to(textLine, {
+            y: -20,
+            opacity: 1,
+            duration: 1,
+            ease: 'power3.out',
+          });
+          observer.unobserve(textLine);
+        }
+      });
+    }
+  }, []);
+
+  
+
   return (
     <div id="footer-hero" className="relative flex items-center justify-center w-screen h-screen">
-        
       <Canvas className="absolute top-0 left-0 bottom-0 right-0 z-30">
         <color attach='background' args={['#000000']} />
         <ambientLight intensity={1} />
@@ -57,22 +88,20 @@ function FooterHero() {
           >
             <ButterflyModel scale={0.05} position={[10, -4.5, -10]} />
           </Float>
-      </Canvas>
+        </Canvas>
 
-
-      {/* Maybe a background gradient over text from top to bottom */}
-      <div id="text-wrapper" className="absolute text-white inset-0 flex flex-col text-center items-center justify-center font-bold 2xl:text-[3.5rem] xl:text-[3rem] lg:text-[2.5rem] sm:text-[2rem] text-[1.5rem] z-40">
-        <div id="text-line">
+      <div id="text-wrapper" className="absolute text-white inset-0 flex flex-col text-center items-center justify-center font-bold 2xl:text-[3.5rem] xl:text-[3rem] lg:text-[2.5rem] sm:text-[2rem] text-[1.5rem] z-40" ref={textLinesRef}>
+        <div className="text-line">
           <span className="opacity-[0.8]">
             Instead of chasing butterflies,
           </span>
         </div>
-        <div id="text-line">
+        <div className="text-line">
           <span className="opacity-[0.6]">
             create a captivating garden,
           </span>
         </div>
-        <div id="text-line">
+        <div className="text-line">
           <span className="opacity-[0.4]">
             and they'll flutter in on their own.
           </span>
@@ -83,3 +112,4 @@ function FooterHero() {
 }
 
 export default FooterHero;
+

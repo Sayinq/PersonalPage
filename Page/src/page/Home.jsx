@@ -8,6 +8,7 @@ import omegaPic from '../assets/images/Omega.jpg';
 import albaPic from '../assets/images/alba.jpg';
 import vanitystorePic from '../assets/images/vanitystore.jpg';
 import FooterHero from '../components/FooterHero';
+import footerArrow from '../assets/images/arrow-down-right.svg';
 
 const Home = () => {
     const workItems = [
@@ -22,9 +23,9 @@ const Home = () => {
             link: "https://github.com/Sayinq/Vanity-Store", 
         },
         { 
-            index: '03', text: 'SoonTM',
+            index: '03', text: 'Echo',
             imageUrl: albaPic,  
-            link: "https://www.microsoft.com/", 
+            link: "https://github.com/Sayinq/Echo-Clothing", 
         },
     ];
   return (
@@ -55,11 +56,35 @@ const Home = () => {
                 <div id="footer-header" className="">
                     <h2 className="font-bold text-xl text-rusticoffwhite uppercase tracking-widest select-none">Keep in touch</h2>
                 </div>
-                <div id="footer-links" className="flex lg:flex-row lg:gap-x-4 flex-col w-fit h-auto font-bold text-left pl-8 gap-y-2 text-2xl text-offwhite">
-                    <a href="https://twitter.com/myleswasbored" className="hover:text-rusticoffwhite"><span>Twitter</span></a>
-                    <a href="https://www.linkedin.com/in/myles-mcghee-584b391b6/" className="hover:text-rusticoffwhite"><span>LinkedIn</span></a>
-                    <a href="https://codepen.io/Sayinq" className="hover:text-rusticoffwhite"><span>Codepen</span></a>
-                    <a href="https://github.com/Sayinq" className="hover:text-rusticoffwhite"><span>Github</span></a>
+                <div id="footer-links" className="flex lg:gap-x-4 flex-col w-fit h-auto font-bold text-left gap-y-2 text-2xl text-offwhite">
+                    <div className="flex flex-row justify-center items-center gap-x-8">
+                        <img src={footerArrow} className="w-6 h-6 rotate-[-90deg] -translate-y-2" />
+                        <a href="https://twitter.com/myleswasbored" 
+                            className="hover:text-rusticoffwhite">
+                                <span>Twitter</span>
+                        </a>
+                    </div>
+                    <div className="flex flex-row justify-center items-center gap-x-8">
+                        <img src={footerArrow} className="w-6 h-6 rotate-[-90deg] -translate-y-2" />
+                        <a href="https://www.linkedin.com/in/myles-mcghee-584b391b6/" 
+                            className="hover:text-rusticoffwhite">
+                                <span>LinkedIn</span>
+                        </a>
+                    </div>
+                    <div className="flex flex-row justify-center items-center gap-x-8">
+                        <img src={footerArrow} className="w-6 h-6 rotate-[-90deg] -translate-y-2" />
+                        <a href="https://codepen.io/Sayinq" 
+                            className="hover:text-rusticoffwhite">
+                                <span>Codepen</span>
+                        </a>
+                    </div>
+                    <div className="flex flex-row justify-start items-center gap-x-8">
+                        <img src={footerArrow} className="w-6 h-6 rotate-[-90deg] -translate-y-2" />
+                        <a href="https://github.com/Sayinq" 
+                            className="hover:text-rusticoffwhite">
+                                <span>Github</span>
+                        </a>
+                    </div>
                 </div>
             </div>
             <div id="contact-info" className="flex flex-col w-fit h-auto gap-y-12 sm:mt-0 mt-16">
