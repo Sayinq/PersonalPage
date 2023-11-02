@@ -54,8 +54,6 @@ const HeroSection = () => {
           <p>UI Designer</p>
           <p>Web Developer</p>
           <p>Video Editor</p>
-          <p>Content Creator</p>
-          <p>Project Manager</p>
         </div>
         <span className="font-semibold text-[0.65rem] tracking-[0.25rem] uppercase translate-y-28 opacity-[0.5]">©2023MylesMcGhee</span>
       </section>
