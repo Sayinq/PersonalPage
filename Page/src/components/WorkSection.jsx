@@ -17,11 +17,11 @@ function WorkSection({ workItems }) {
             { width: 0 },
             {
               width: '100%',
-              duration: 1,
+              duration: 0.75,
               scrollTrigger: {
                 trigger: item,
-                start: 'top center',
-                end: 'bottom center',
+                start: 'top center+=100',
+                end: 'center center',
                 scrub: 0.5,
               },
             }

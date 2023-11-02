@@ -40,6 +40,7 @@ const HeroSection = () => {
         <div id="video-bg" className="absolute inset-0 top-0 left-0 bottom-0 right-0">
             <video
             autoPlay
+            playsInline
             muted
             loop
             preload="auto"
