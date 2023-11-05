@@ -4,7 +4,7 @@ import glsl from 'vite-plugin-glsl'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/Page/',
+  base: '/',
   assetsInclude: [
     '**/*.glb',
     '**/*.hdr',
